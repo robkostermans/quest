@@ -65,5 +65,7 @@ function createPlane(){
 	airplane = new AirPlane();
 	airplane.mesh.scale.set(.25,.25,.25);
 	airplane.mesh.position.y = 0;
+	airplane.mesh.position.x = 0;
+	airplane.mesh.position.z = 0;
 	scene.add(airplane.mesh);
 }

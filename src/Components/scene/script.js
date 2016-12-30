@@ -18,8 +18,8 @@ function createScene() {
 	
 	// Create the camera
 	aspectRatio = WIDTH / HEIGHT;
-	fieldOfView = 60;
-	nearPlane = 1;
+	fieldOfView = 45;
+	nearPlane = 0.1;
 	farPlane = 10000;
 	camera = new THREE.PerspectiveCamera(
 		fieldOfView,
@@ -29,14 +29,13 @@ function createScene() {
 		);
 	
 	// Set the position of the camera
-	camera.position.x = 0;
-	camera.position.z = 0;
-	camera.position.y = 100;
-	
-	//camera.lookAt(new THREE.Vector3(0,0,0));
+	camera.position.x = 100;
+	camera.position.z = 500;
+	camera.position.y = 150;
+	//camera.position.set(0,6,0);
 
-	var helper = new THREE.CameraHelper( camera );
-	scene.add( helper );	
+	//var helper = new THREE.CameraHelper( camera );
+	//scene.add( helper );	
 
 	// Create the renderer
 	renderer = new THREE.WebGLRenderer({ 
@@ -114,4 +113,9 @@ function createLights() {
 	// to activate the lights, just add them to the scene
 	scene.add(hemisphereLight);  
 	scene.add(shadowLight);
+
+
+	var helper = new THREE.HemisphereLightHelper( hemisphereLight, 5 );
+
+scene.add( helper );
 }
