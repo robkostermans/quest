@@ -1,2 +1,2 @@
-# quest
+# Quest for knowledge
 Quest for knowdlege

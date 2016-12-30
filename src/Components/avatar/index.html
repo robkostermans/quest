@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en/us"> 
+  <head>
+    <title>Component - Avatar </title>
+    <link href="../../../quest-min.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="quest__body">
+    <main>
+      <h1>Component - Avatar </h1>
+      <div id="world"></div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script src="script.js"></script>
+      <script src="../library/quest-lib-min.js"></script>
+      <script>
+        window.addEventListener('load', init, false);
+        
+        function init() {
+            console.log(0)
+            createScene();
+            createPlane();
+            createLights();
+        
+            renderer.render(scene, camera);
+        
+        }
+      </script>
+    </main>
+  </body>
+</html>
